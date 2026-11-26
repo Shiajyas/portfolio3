@@ -30,11 +30,18 @@ export const DeveloperTerminal: React.FC = () => {
     },
   ]);
 
-  const terminalEndRef = useRef<HTMLDivElement>(null);
+  const terminalContainerRef = useRef<HTMLDivElement>(null);
+  const isInitialMount = useRef(true);
   const { achievements } = useGameStore();
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    if (terminalContainerRef.current) {
+      terminalContainerRef.current.scrollTop = terminalContainerRef.current.scrollHeight;
+    }
   }, [history]);
 
   const handleCommand = (e: React.FormEvent) => {
@@ -180,7 +187,10 @@ export const DeveloperTerminal: React.FC = () => {
       </div>
 
       {/* Terminal Output */}
-      <div className="flex-1 p-4 font-mono text-xs overflow-y-auto space-y-4 scanline">
+      <div
+        ref={terminalContainerRef}
+        className="flex-1 p-4 font-mono text-xs overflow-y-auto space-y-4 scanline"
+      >
         {history.map((entry, idx) => (
           <div key={idx} className="space-y-1">
             <div className="flex items-center gap-2 text-[#88847B]">
@@ -190,7 +200,6 @@ export const DeveloperTerminal: React.FC = () => {
             <div className="pl-4">{entry.output}</div>
           </div>
         ))}
-        <div ref={terminalEndRef} />
       </div>
 
       {/* Terminal Input Bar */}
