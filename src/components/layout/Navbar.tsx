@@ -88,7 +88,7 @@ export const Navbar: React.FC = () => {
           {/* Action Controls */}
           <div className="hidden lg:flex items-center gap-4">
             {/* Opportunities indicator */}
-            {profileData.availableForOpportunities && (
+            {/* {profileData.availableForOpportunities && (
               <div
                 className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E99B3D]/10 border border-[#E99B3D]/30 text-[#E99B3D] text-xs font-mono"
                 title={profileData.availabilityNote}
@@ -96,7 +96,7 @@ export const Navbar: React.FC = () => {
                 <span className="w-2 h-2 rounded-full bg-[#E99B3D] animate-ping" />
                 <span className="hidden xl:inline text-[11px]">Available for Roles</span>
               </div>
-            )}
+            )} */}
 
             {/* Audio Toggle */}
             <button

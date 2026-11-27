@@ -41,16 +41,16 @@ export const HeroChapter: React.FC = () => {
             <span className="font-mono text-xs uppercase tracking-widest text-[#E99B3D] px-2.5 py-1 rounded bg-[#E99B3D]/10 border border-[#E99B3D]/30">
               Chapter 01 // The Entrance
             </span>
-            {profileData.availableForOpportunities && (
+            {/* {profileData.availableForOpportunities && (
               <span className="flex items-center gap-2 font-mono text-xs text-[#D9D1C3] bg-[#252522] border border-[#3D3D38] px-3 py-1 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                 <span>{profileData.availabilityNote}</span>
               </span>
-            )}
+            )} */}
           </div>
 
           {/* Main Headline */}
-          <div className="space-y-2">
+          <div className="space-y-2"> 
             <h1 className="text-4xl sm:text-6xl xl:text-7xl font-display font-extrabold tracking-tight text-[#F2EBDD] leading-[1.05]">
               I TURN IDEAS INTO <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2EBDD] via-[#E99B3D] to-[#F5A623]">

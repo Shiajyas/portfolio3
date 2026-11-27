@@ -32,12 +32,12 @@ export const Footer: React.FC = () => {
             <p className="text-sm text-[#A8A49C] leading-relaxed max-w-sm">
               Full-Stack JavaScript Developer building intelligent applications, WebRTC communications, and domain-driven business software.
             </p>
-            <div className="flex items-center gap-2 pt-2">
+            {/* <div className="flex items-center gap-2 pt-2">
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-xs font-mono text-[#D9D1C3]">
                 {profileData.availabilityNote}
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact col */}
